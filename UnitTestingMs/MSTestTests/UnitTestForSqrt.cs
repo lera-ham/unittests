@@ -12,7 +12,6 @@ namespace MSTestTests
         {
             Console.Out.WriteLine("Starting test for method Sqrt!");
         }
-
         [TestMethod]
         public void Sqrt()
         {
@@ -23,7 +22,6 @@ namespace MSTestTests
 
             Assert.AreEqual(3, result);
         }
-
         [TestCleanup]
         public void CleanUp()
         {

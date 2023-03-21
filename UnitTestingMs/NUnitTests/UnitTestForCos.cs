@@ -24,12 +24,10 @@ namespace NUnitTests
 
             Assert.AreEqual(1, result);
         }
-
         [TearDown]
         public void TestCleanup()
         {
             Console.Out.WriteLine("Finished!");
         }
-
     }
 }

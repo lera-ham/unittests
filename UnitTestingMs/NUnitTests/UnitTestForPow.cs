@@ -13,24 +13,21 @@ namespace NUnitTests
         {
             Console.Out.WriteLine("Starting test for method Pow!");
         }
-
         [Test]
         public void Pow()
         {
             Calculator calculator = new Calculator();
-
             int valueToBeRaised = 1;
             double powerValueDouble = Convert.ToDouble(6);
+
             var result = calculator.Pow(valueToBeRaised, powerValueDouble);
 
             Assert.AreEqual(1, result);
         }
-
         [TearDown]
         public void TestCleanup()
         {
             Console.Out.WriteLine("Finished!");
         }
-
     }
 }

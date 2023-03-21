@@ -12,7 +12,6 @@ namespace MSTestTests
         {
             Console.Out.WriteLine("Starting test for method Sin!");
         }
-
         [TestMethod]
         public void Sin()
         {
@@ -23,7 +22,6 @@ namespace MSTestTests
 
             Assert.AreEqual(0, result);
         }
-
         [TestCleanup]
         public void CleanUp()
         {

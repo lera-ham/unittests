@@ -12,7 +12,6 @@ namespace MSTestTests
         {
             Console.Out.WriteLine("Starting test for method Multiply!");
         }
-
         [TestMethod]
         public void Multiply()
         {
@@ -24,7 +23,6 @@ namespace MSTestTests
 
             Assert.AreEqual(28, result);
         }
-
         [TestCleanup]
         public void CleanUp()
         {

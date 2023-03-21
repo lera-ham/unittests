@@ -13,7 +13,6 @@ namespace NUnitTests
         {
             Console.Out.WriteLine("Starting test for method Sin!");
         }
-
         [Test]
         public void Sin()
         {
@@ -24,12 +23,10 @@ namespace NUnitTests
 
             Assert.AreEqual(0, result);
         }
-
         [TearDown]
         public void TestCleanup()
         {
             Console.Out.WriteLine("Finished!");
         }
-
     }
 }

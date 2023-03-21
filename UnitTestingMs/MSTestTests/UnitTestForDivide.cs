@@ -5,7 +5,6 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace MSTestTests
 {
     [TestClass]
-    // [Parallelizable]
     public class UnitTestForDivide
     {
         [TestInitialize]
@@ -13,23 +12,18 @@ namespace MSTestTests
         {
             Console.Out.WriteLine("Starting test for method Divide!");
         }
-
         [DataTestMethod]
         [DataRow(1, 1, 1)]
         [DataRow(12, 4, 3)]
-        [DataRow("14", 1, 14)]
+        [DataRow(14, 1, 14)]
         public void Divide(int n, int d, int q)
         {
             Calculator calculator = new Calculator();
-            int dividedValueInt = Convert.ToInt32(n);
-            int dividedForValueInt = Convert.ToInt32(d);
 
-            var result = calculator.Divide(dividedValueInt, dividedForValueInt);
-            int resultInt = Convert.ToInt32(result);
+            var result = calculator.Divide(n, d);
 
-            Assert.AreEqual(q, resultInt);
+            Assert.AreEqual(q, result);
         }
-
         [TestCleanup]
         public void CleanUp()
         {

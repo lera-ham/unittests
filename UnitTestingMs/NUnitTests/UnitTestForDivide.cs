@@ -6,7 +6,7 @@ using Assert = NUnit.Framework.Assert;
 namespace NUnitTests
 {
     [TestFixture]
-    // [Parallelizable]
+   // [Parallelizable]
     public class UnitTestForDivide
     {
         [SetUp]
@@ -14,7 +14,6 @@ namespace NUnitTests
         {
             Console.Out.WriteLine("Starting test for method Divide!");
         }
-
         [Test]
         [TestCase(3, 3, 1)]
         [TestCase(4, 2, 2)]
@@ -27,12 +26,10 @@ namespace NUnitTests
 
             Assert.AreEqual(q, result);
         }
-
         [TearDown]
         public void TestCleanup()
         {
             Console.Out.WriteLine("Finished!");
         }
-
     }
 }

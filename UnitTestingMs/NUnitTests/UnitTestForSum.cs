@@ -13,7 +13,6 @@ namespace NUnitTests
         {
             Console.Out.WriteLine("Starting test for method Sum!");
         }
-
         [Test]
         public void Sum()
         {
@@ -27,12 +26,10 @@ namespace NUnitTests
 
             Assert.AreEqual(7, result);
         }
-
         [TearDown]
         public void TestCleanup()
         {
             Console.Out.WriteLine("Finished!");
         }
-
     }
 }

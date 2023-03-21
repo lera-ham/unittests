@@ -12,7 +12,6 @@ namespace MSTestTests
         {
             Console.Out.WriteLine("Starting test for method isNegative!");
         }
-
         [TestMethod]
         public void isNegative()
         {
@@ -23,7 +22,6 @@ namespace MSTestTests
 
             Assert.AreEqual(true, result);
         }
-
         [TestCleanup]
         public void CleanUp()
         {

@@ -12,19 +12,17 @@ namespace MSTestTests
         {
             Console.Out.WriteLine("Starting test for method Pow!");
         }
-
         [TestMethod]
         public void Pow()
         {
             Calculator calculator = new Calculator();
-
             int valueToBeRaised = 1;
             double powerValueDouble = Convert.ToDouble(6);
+
             var result = calculator.Pow(valueToBeRaised, powerValueDouble);
 
             Assert.AreEqual(1, result);
         }
-
         [TestCleanup]
         public void CleanUp()
         {

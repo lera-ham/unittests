@@ -12,7 +12,6 @@ namespace MSTestTests
         {
             Console.Out.WriteLine("Starting test for method Sub!");
         }
-
         [TestMethod]
         public void Sub()
         {
@@ -24,7 +23,6 @@ namespace MSTestTests
 
             Assert.AreEqual(2, result);
         }
-
         [TestCleanup]
         public void CleanUp()
         {
@@ -32,4 +30,3 @@ namespace MSTestTests
         }
     }
 }
-

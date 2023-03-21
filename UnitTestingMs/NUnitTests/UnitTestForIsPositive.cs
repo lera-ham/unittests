@@ -13,7 +13,6 @@ namespace NUnitTests
         {
             Console.Out.WriteLine("Starting test for method isPositive!");
         }
-
         [Test]
         public void isPositive()
         {
@@ -24,12 +23,10 @@ namespace NUnitTests
 
             Assert.AreEqual(true, result);
         }
-
         [TearDown]
         public void TestCleanup()
         {
             Console.Out.WriteLine("Finished!");
         }
-
     }
 }

@@ -13,7 +13,6 @@ namespace NUnitTests
         {
             Console.Out.WriteLine("Starting test for method Sub!");
         }
-
         [Test]
         public void Sub()
         {
@@ -25,13 +24,11 @@ namespace NUnitTests
 
             Assert.AreEqual(2, result);
         }
-
         [TearDown]
         public void TestCleanup()
         {
             Console.Out.WriteLine("Finished!");
         }
-
     }
 }
 

@@ -12,7 +12,6 @@ namespace MSTestTests
         {
             Console.Out.WriteLine("Starting test for method Cos!");
         }
-
         [TestMethod]
         public void Cos()
         {
@@ -23,12 +22,10 @@ namespace MSTestTests
 
             Assert.AreEqual(1, result);
         }
-
         [TestCleanup]
         public void CleanUp()
         {
             Console.Out.WriteLine("Finished!");
         }
-
     }
 }

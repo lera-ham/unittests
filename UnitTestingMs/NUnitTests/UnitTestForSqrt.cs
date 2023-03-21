@@ -13,7 +13,6 @@ namespace NUnitTests
         {
             Console.Out.WriteLine("Starting test for method Sqrt!");
         }
-
         [Test]
         public void Sqrt()
         {
@@ -24,12 +23,10 @@ namespace NUnitTests
 
             Assert.AreEqual(3, result);
         }
-
         [TearDown]
         public void TestCleanup()
         {
             Console.Out.WriteLine("Finished!");
         }
-
     }
 }
