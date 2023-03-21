@@ -26,7 +26,6 @@ namespace MSTestTests
 
             Assert.AreEqual(7, result);
         }
-
         [TestCleanup]
         public void CleanUp()
         {
