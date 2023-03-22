@@ -1,32 +1,33 @@
 ﻿using System;
 using CSharpCalculator;
+using MSTestTests;
 using NUnit.Framework;
 using Assert = NUnit.Framework.Assert;
 
 namespace NUnitTests
 {
     [TestFixture]
-    public class UnitTestForSqrt
+    [Parallelizable(ParallelScope.All)]
+    public class UnitTestForSqrt : NUnitBaseClass
     {
-        [SetUp]
-        public void TestSetup()
-        {
-            Console.Out.WriteLine("Starting test for method Sqrt!");
-        }
-        [Test]
-        public void Sqrt()
-        {
             Calculator calculator = new Calculator();
-            var valueToHaveSqrtFrom = 9;
+            [Test]
+            public void SqrtSmallValue()
+            {
+                var valueToHaveSqrtFrom = 9;
 
-            var result = calculator.Sqrt(valueToHaveSqrtFrom);
+                var result = calculator.Sqrt(valueToHaveSqrtFrom);
 
-            Assert.AreEqual(3, result);
+                Assert.AreEqual(3, result);
+            }
+            [Test]
+            public void SqrtBigValue()
+            {
+                var valueToHaveSqrtFrom = 10000;
+
+                var result = calculator.Sqrt(valueToHaveSqrtFrom);
+
+                Assert.AreEqual(100, result);
+            }
         }
-        [TearDown]
-        public void TestCleanup()
-        {
-            Console.Out.WriteLine("Finished!");
-        }
-    }
 }

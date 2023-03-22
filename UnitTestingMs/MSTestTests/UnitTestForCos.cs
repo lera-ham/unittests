@@ -5,27 +5,26 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace MSTestTests
 {
     [TestClass]
-    public class UnitTestForCos
+    public class UnitTestForCos : MSTestBaseClass
     {
-        [TestInitialize]
-        public void TestInit()
-        {
-            Console.Out.WriteLine("Starting test for method Cos!");
-        }
+        Calculator calculator = new Calculator();
         [TestMethod]
-        public void Cos()
+        public void CosOfZero()
         {
-            Calculator calculator = new Calculator();
             var valueToCalculate = 0;
 
             var result = calculator.Cos(valueToCalculate);
 
             Assert.AreEqual(1, result);
         }
-        [TestCleanup]
-        public void CleanUp()
-        {
-            Console.Out.WriteLine("Finished!");
+        [TestMethod]
+        public void CosOfPositiveValue()
+        { 
+            var valueToCalculate = Math.PI/4;
+
+            var result = calculator.Cos(valueToCalculate);
+
+            Assert.AreEqual(Math.Cos(valueToCalculate), result);
         }
     }
 }

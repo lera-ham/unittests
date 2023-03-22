@@ -6,27 +6,27 @@ using Assert = NUnit.Framework.Assert;
 namespace NUnitTests
 {
     [TestFixture]
-    public class UnitTestForAbs
+    [Parallelizable(ParallelScope.All)]
+    public class UnitTestForAbs: NUnitBaseClass
     {
-        [SetUp]
-        public void TestSetup()
-        {
-            Console.Out.WriteLine("Starting test for method Abs!");
-        }
+        Calculator calculator = new Calculator();
         [Test]
-        public void Abs()
+        public void AbsAbsForNegative()
         {
-            Calculator calculator = new Calculator();
             var valueToCalculate = -3;
 
             var result = calculator.Abs(valueToCalculate);
 
             Assert.AreEqual(3, result);
         }
-        [TearDown]
-        public void TestCleanup()
+        [Test]
+        public void AbsAbsForPositive()
         {
-            Console.Out.WriteLine("Finished!");
+            var valueToCalculate = 3;
+
+            var result = calculator.Abs(valueToCalculate);
+
+            Assert.AreEqual(3, result);
         }
     }
 }

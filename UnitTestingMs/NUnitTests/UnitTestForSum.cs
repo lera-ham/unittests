@@ -3,20 +3,17 @@ using CSharpCalculator;
 using NUnit.Framework;
 using Assert = NUnit.Framework.Assert;
 
+[assembly:LevelOfParallelism(3)]
 namespace NUnitTests
 {
     [TestFixture]
-    public class UnitTestForSum
+    [Parallelizable(ParallelScope.All)]
+    public class UnitTestForSum : NUnitBaseClass
     {
-        [SetUp]
-        public void TestSetup()
-        {
-            Console.Out.WriteLine("Starting test for method Sum!");
-        }
+        Calculator calculator = new Calculator();
         [Test]
-        public void Sum()
+        public void SumPositive()
         {
-            Calculator calculator = new Calculator();
             var firstValueToAdd = 1;
             double firstValueToAddDouble = Convert.ToDouble(firstValueToAdd);
             var secondValueToAdd = 6;
@@ -26,10 +23,17 @@ namespace NUnitTests
 
             Assert.AreEqual(7, result);
         }
-        [TearDown]
-        public void TestCleanup()
+        [Test]
+        public void SumNegative()
         {
-            Console.Out.WriteLine("Finished!");
+            var firstValueToAdd = -1;
+            double firstValueToAddDouble = Convert.ToDouble(firstValueToAdd);
+            var secondValueToAdd = -6;
+            double secondValueToAddDouble = Convert.ToDouble(secondValueToAdd);
+
+            var result = calculator.Add(secondValueToAddDouble, firstValueToAddDouble);
+
+            Assert.AreEqual(-7, result);
         }
     }
 }

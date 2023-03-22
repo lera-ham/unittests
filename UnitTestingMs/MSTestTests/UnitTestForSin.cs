@@ -5,27 +5,26 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace MSTestTests
 {
     [TestClass]
-    public class UnitTestForSin
+    public class UnitTestForSin : MSTestBaseClass
     {
-        [TestInitialize]
-        public void TestInit()
-        {
-            Console.Out.WriteLine("Starting test for method Sin!");
-        }
+        Calculator calculator = new Calculator();
         [TestMethod]
-        public void Sin()
+        public void SinOfZero()
         {
-            Calculator calculator = new Calculator();
             var valueToCalculate = 0;
 
             var result = calculator.Sin(valueToCalculate);
 
             Assert.AreEqual(0, result);
         }
-        [TestCleanup]
-        public void CleanUp()
+        [TestMethod]
+        public void SinOfPositiveValue()
         {
-            Console.Out.WriteLine("Finished!");
+            var valueToCalculate = Math.PI / 4;
+
+            var result = calculator.Sin(valueToCalculate);
+
+            Assert.AreEqual(Math.Sin(valueToCalculate), result);
         }
     }
 }

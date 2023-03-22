@@ -6,17 +6,14 @@ using Assert = NUnit.Framework.Assert;
 namespace NUnitTests
 {
     [TestFixture]
-    public class UnitTestForMultiply
+    [Parallelizable(ParallelScope.All)]
+    public class UnitTestForMultiply : NUnitBaseClass
     {
-        [SetUp]
-        public void TestSetup()
-        {
-            Console.Out.WriteLine("Starting test for method Multiply!");
-        }
+        Calculator calculator = new Calculator();
+
         [Test]
-        public void Multiply()
+        public void MultiplyPositive()
         {
-            Calculator calculator = new Calculator();
             var firstValueToMultiply = 7;
             var secondValueToMultiply = 4;
 
@@ -24,11 +21,15 @@ namespace NUnitTests
 
             Assert.AreEqual(28, result);
         }
-        [TearDown]
-        public void TestCleanup()
+        [Test]
+        public void MultiplyNegative()
         {
-            Console.Out.WriteLine("Finished!");
+            var firstValueToMultiply = -7;
+            var secondValueToMultiply = -4;
+
+            var result = calculator.Multiply(firstValueToMultiply, secondValueToMultiply);
+
+            Assert.AreEqual(28, result);
         }
     }
 }
-

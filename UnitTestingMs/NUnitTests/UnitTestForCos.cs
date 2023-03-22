@@ -6,28 +6,27 @@ using Assert = NUnit.Framework.Assert;
 namespace NUnitTests
 {
     [TestFixture]
-    public class UnitTestForCos
+    [Parallelizable(ParallelScope.All)]
+    public class UnitTestForCos : NUnitBaseClass
     {
-        [SetUp]
-        public void TestSetup()
-        {
-            Console.Out.WriteLine("Starting test for method Cos!");
-        }
-
+        Calculator calculator = new Calculator();
         [Test]
-        public void Cos()
+        public void CosOfZero()
         {
-            Calculator calculator = new Calculator();
             var valueToCalculate = 0;
 
             var result = calculator.Cos(valueToCalculate);
 
             Assert.AreEqual(1, result);
         }
-        [TearDown]
-        public void TestCleanup()
+        [Test]
+        public void CosOfPositiveValue()
         {
-            Console.Out.WriteLine("Finished!");
+            var valueToCalculate = Math.PI / 4;
+
+            var result = calculator.Cos(valueToCalculate);
+
+            Assert.AreEqual(Math.Cos(valueToCalculate), result);
         }
     }
 }

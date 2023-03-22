@@ -6,17 +6,13 @@ using Assert = NUnit.Framework.Assert;
 namespace NUnitTests
 {
     [TestFixture]
-    public class UnitTestForSubtraction
+    [Parallelizable(ParallelScope.All)]
+    public class UnitTestForSubtraction : NUnitBaseClass
     {
-        [SetUp]
-        public void TestSetup()
+        Calculator calculator = new Calculator();
+        [TestMethod]
+        public void SubPositive()
         {
-            Console.Out.WriteLine("Starting test for method Sub!");
-        }
-        [Test]
-        public void Sub()
-        {
-            Calculator calculator = new Calculator();
             var valueToSubstractFrom = 7;
             var valueToSubstract = 5;
 
@@ -24,11 +20,15 @@ namespace NUnitTests
 
             Assert.AreEqual(2, result);
         }
-        [TearDown]
-        public void TestCleanup()
+        [TestMethod]
+        public void SubNegative()
         {
-            Console.Out.WriteLine("Finished!");
+            var valueToSubstractFrom = -7;
+            var valueToSubstract = -5;
+
+            var result = calculator.Sub(valueToSubstractFrom, valueToSubstract);
+
+            Assert.AreEqual(-2, result);
         }
     }
 }
-

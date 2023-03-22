@@ -5,17 +5,12 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace MSTestTests
 {
     [TestClass]
-    public class UnitTestForPow
+    public class UnitTestForPow : MSTestBaseClass
     {
-        [TestInitialize]
-        public void TestInit()
-        {
-            Console.Out.WriteLine("Starting test for method Pow!");
-        }
+        Calculator calculator = new Calculator();
         [TestMethod]
-        public void Pow()
+        public void PowPositive()
         {
-            Calculator calculator = new Calculator();
             int valueToBeRaised = 1;
             double powerValueDouble = Convert.ToDouble(6);
 
@@ -23,10 +18,15 @@ namespace MSTestTests
 
             Assert.AreEqual(1, result);
         }
-        [TestCleanup]
-        public void CleanUp()
+        [TestMethod]
+        public void PowNegative()
         {
-            Console.Out.WriteLine("Finished!");
+            int valueToBeRaised = -1;
+            double powerValueDouble = Convert.ToDouble(5);
+
+            var result = calculator.Pow(valueToBeRaised, powerValueDouble);
+
+            Assert.AreEqual(-1, result);
         }
     }
 }

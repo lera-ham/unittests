@@ -5,17 +5,12 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace MSTestTests
 {
     [TestClass]
-    public class UnitTestForSubtraction
+    public class UnitTestForSubtraction : MSTestBaseClass
     {
-        [TestInitialize]
-        public void TestInit()
-        {
-            Console.Out.WriteLine("Starting test for method Sub!");
-        }
+        Calculator calculator = new Calculator();
         [TestMethod]
-        public void Sub()
+        public void SubPositive()
         {
-            Calculator calculator = new Calculator();
             var valueToSubstractFrom = 7;
             var valueToSubstract = 5;
 
@@ -23,10 +18,15 @@ namespace MSTestTests
 
             Assert.AreEqual(2, result);
         }
-        [TestCleanup]
-        public void CleanUp()
+        [TestMethod]
+        public void SubNegative()
         {
-            Console.Out.WriteLine("Finished!");
+            var valueToSubstractFrom = -7;
+            var valueToSubstract = -5;
+
+            var result = calculator.Sub(valueToSubstractFrom, valueToSubstract);
+
+            Assert.AreEqual(-2, result);
         }
     }
 }

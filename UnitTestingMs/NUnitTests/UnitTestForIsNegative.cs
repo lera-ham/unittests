@@ -6,27 +6,27 @@ using Assert = NUnit.Framework.Assert;
 namespace NUnitTests
 {
     [TestFixture]
-    public class UnitTestForIsNegative
+    [Parallelizable(ParallelScope.All)]
+    public class UnitTestForIsNegative : NUnitBaseClass
     {
-        [SetUp]
-        public void TestSetup()
-        {
-            Console.Out.WriteLine("Starting test for method isNegative!");
-        }
+        Calculator calculator = new Calculator();
         [Test]
-        public void isNegative()
+        public void IsNegativeForNegativeValue()
         {
-            Calculator calculator = new Calculator();
             var valueToCalculate = -1;
 
             var result = calculator.isNegative(valueToCalculate);
 
             Assert.AreEqual(true, result);
         }
-        [TearDown]
-        public void TestCleanup()
+        [Test]
+        public void IsNegativeForPositiveValue()
         {
-            Console.Out.WriteLine("Finished!");
+            var valueToCalculate = 1;
+
+            var result = calculator.isNegative(valueToCalculate);
+
+            Assert.AreEqual(false, result);
         }
     }
 }

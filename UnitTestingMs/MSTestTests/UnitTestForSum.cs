@@ -5,18 +5,12 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace MSTestTests
 {
     [TestClass]
-    public class UnitTestForSum
+    public class UnitTestForSum : MSTestBaseClass
     {
-        [TestInitialize]
-        public void TestInit()
-        {
-            Console.Out.WriteLine("Starting test for method Sum!");
-        }
-
+        Calculator calculator = new Calculator();
         [TestMethod]
-        public void Sum()
+        public void SumPositive()
         {
-            Calculator calculator = new Calculator();
             var firstValueToAdd = 1;
             double firstValueToAddDouble = Convert.ToDouble(firstValueToAdd);
             var secondValueToAdd = 6;
@@ -26,10 +20,17 @@ namespace MSTestTests
 
             Assert.AreEqual(7, result);
         }
-        [TestCleanup]
-        public void CleanUp()
+        [TestMethod]
+        public void SumNegative()
         {
-            Console.Out.WriteLine("Finished!");
+            var firstValueToAdd = -1;
+            double firstValueToAddDouble = Convert.ToDouble(firstValueToAdd);
+            var secondValueToAdd = -6;
+            double secondValueToAddDouble = Convert.ToDouble(secondValueToAdd);
+
+            var result = calculator.Add(secondValueToAddDouble, firstValueToAddDouble);
+
+            Assert.AreEqual(-7, result);
         }
     }
 }

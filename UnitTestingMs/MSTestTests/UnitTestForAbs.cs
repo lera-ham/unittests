@@ -5,27 +5,26 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace MSTestTests
 {
     [TestClass]
-    public class UnitTestForAbs
+    public class UnitTestForAbs: MSTestBaseClass
     {
-        [TestInitialize]
-        public void TestInit()
-        {
-            Console.Out.WriteLine("Starting test for method Abs!");
-        }
+        Calculator calculator = new Calculator();
         [TestMethod]
-        public void Abs()
+        public void AbsForNegative()
         {
-            Calculator calculator = new Calculator();
             var valueToCalculate = -3;
 
             var result = calculator.Abs(valueToCalculate);
 
             Assert.AreEqual(3, result);
         }
-        [TestCleanup]
-        public void CleanUp()
+        [TestMethod]
+        public void AbsForPositive()
         {
-            Console.Out.WriteLine("Finished!");
+            var valueToCalculate = 3;
+
+            var result = calculator.Abs(valueToCalculate);
+
+            Assert.AreEqual(3, result);
         }
     }
 }

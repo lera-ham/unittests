@@ -6,17 +6,13 @@ using Assert = NUnit.Framework.Assert;
 namespace NUnitTests
 {
     [TestFixture]
-    public class UnitTestForPow
+    [Parallelizable(ParallelScope.All)]
+    public class UnitTestForPow : NUnitBaseClass
     {
-        [SetUp]
-        public void TestSetup()
-        {
-            Console.Out.WriteLine("Starting test for method Pow!");
-        }
+        Calculator calculator = new Calculator();
         [Test]
-        public void Pow()
+        public void PowPositive()
         {
-            Calculator calculator = new Calculator();
             int valueToBeRaised = 1;
             double powerValueDouble = Convert.ToDouble(6);
 
@@ -24,10 +20,15 @@ namespace NUnitTests
 
             Assert.AreEqual(1, result);
         }
-        [TearDown]
-        public void TestCleanup()
+        [Test]
+        public void PowNegative()
         {
-            Console.Out.WriteLine("Finished!");
+            int valueToBeRaised = -1;
+            double powerValueDouble = Convert.ToDouble(5);
+
+            var result = calculator.Pow(valueToBeRaised, powerValueDouble);
+
+            Assert.AreEqual(-1, result);
         }
     }
 }

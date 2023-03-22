@@ -5,27 +5,26 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace MSTestTests
 {
     [TestClass]
-    public class UnitTestForSqrt
+    public class UnitTestForSqrt : MSTestBaseClass
     {
-        [TestInitialize]
-        public void TestInit()
-        {
-            Console.Out.WriteLine("Starting test for method Sqrt!");
-        }
+        Calculator calculator = new Calculator();
         [TestMethod]
-        public void Sqrt()
+        public void SqrtSmallValue()
         {
-            Calculator calculator = new Calculator();
             var valueToHaveSqrtFrom = 9;
 
             var result = calculator.Sqrt(valueToHaveSqrtFrom);
 
             Assert.AreEqual(3, result);
         }
-        [TestCleanup]
-        public void CleanUp()
+        [TestMethod]
+        public void SqrtBigValue()
         {
-            Console.Out.WriteLine("Finished!");
+            var valueToHaveSqrtFrom = 10000;
+
+            var result = calculator.Sqrt(valueToHaveSqrtFrom);
+
+            Assert.AreEqual(100, result);
         }
     }
 }

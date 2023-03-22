@@ -5,17 +5,12 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace MSTestTests
 {
     [TestClass]
-    public class UnitTestForMultiply
+    public class UnitTestForMultiply : MSTestBaseClass
     {
-        [TestInitialize]
-        public void TestInit()
-        {
-            Console.Out.WriteLine("Starting test for method Multiply!");
-        }
+        Calculator calculator = new Calculator();
         [TestMethod]
-        public void Multiply()
+        public void MultiplyPositive()
         {
-            Calculator calculator = new Calculator();
             var firstValueToMultiply = 7;
             var secondValueToMultiply = 4;
 
@@ -23,11 +18,15 @@ namespace MSTestTests
 
             Assert.AreEqual(28, result);
         }
-        [TestCleanup]
-        public void CleanUp()
+        [TestMethod]
+        public void MultiplyNegative()
         {
-            Console.Out.WriteLine("Finished!");
+            var firstValueToMultiply = -7;
+            var secondValueToMultiply = -4;
+
+            var result = calculator.Multiply(firstValueToMultiply, secondValueToMultiply);
+
+            Assert.AreEqual(28, result);
         }
     }
 }
-

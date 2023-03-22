@@ -5,27 +5,28 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace MSTestTests
 {
     [TestClass]
-    public class UnitTestForIsPositive
+    public class UnitTestForIsPositive : MSTestBaseClass
     {
-        [TestInitialize]
-        public void TestInit()
-        {
-            Console.Out.WriteLine("Starting test for method isPositive!");
-        }
+        Calculator calculator = new Calculator();
         [TestMethod]
-        public void isPositive()
+        public void IsPositiveForPositiveValue()
         {
-            Calculator calculator = new Calculator();
+
             var valueToCalculate = 1;
 
             var result = calculator.isPositive(valueToCalculate);
 
             Assert.AreEqual(true, result);
         }
-        [TestCleanup]
-        public void CleanUp()
+        [TestMethod]
+        public void IsPositiveForNegativeValue()
         {
-            Console.Out.WriteLine("Finished!");
+
+            var valueToCalculate = -1;
+
+            var result = calculator.isPositive(valueToCalculate);
+
+            Assert.AreEqual(false, result);
         }
     }
 }

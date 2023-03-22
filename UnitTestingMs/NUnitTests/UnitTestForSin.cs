@@ -6,27 +6,27 @@ using Assert = NUnit.Framework.Assert;
 namespace NUnitTests
 {
     [TestFixture]
-    public class UnitTestForSin
+    [Parallelizable(ParallelScope.All)]
+    public class UnitTestForSin : NUnitBaseClass
     {
-        [SetUp]
-        public void TestSetup()
-        {
-            Console.Out.WriteLine("Starting test for method Sin!");
-        }
+        Calculator calculator = new Calculator();
         [Test]
-        public void Sin()
+        public void SinOfZero()
         {
-            Calculator calculator = new Calculator();
             var valueToCalculate = 0;
 
             var result = calculator.Sin(valueToCalculate);
 
             Assert.AreEqual(0, result);
         }
-        [TearDown]
-        public void TestCleanup()
+        [TestMethod]
+        public void SinOfPositiveValue()
         {
-            Console.Out.WriteLine("Finished!");
+            var valueToCalculate = Math.PI / 4;
+
+            var result = calculator.Sin(valueToCalculate);
+
+            Assert.AreEqual(Math.Sin(valueToCalculate), result);
         }
     }
 }
