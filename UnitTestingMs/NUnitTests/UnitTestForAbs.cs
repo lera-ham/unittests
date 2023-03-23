@@ -6,7 +6,7 @@ using Assert = NUnit.Framework.Assert;
 namespace NUnitTests
 {
     [TestFixture]
-    [Parallelizable(ParallelScope.All)]
+   // [Parallelizable(ParallelScope.All)]
     public class UnitTestForAbs: NUnitBaseClass
     {
         Calculator calculator = new Calculator();

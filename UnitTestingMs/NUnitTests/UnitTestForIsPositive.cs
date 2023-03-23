@@ -22,7 +22,6 @@ namespace NUnitTests
         [TestMethod]
         public void IsPositiveForNegativeValue()
         {
-
             var valueToCalculate = -1;
 
             var result = calculator.isPositive(valueToCalculate);

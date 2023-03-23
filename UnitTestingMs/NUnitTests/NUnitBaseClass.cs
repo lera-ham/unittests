@@ -13,7 +13,6 @@ namespace NUnitTests
         {
             Console.Out.WriteLine("Starting test!");
         }
-        
         [TearDown]
         public void CleanUp()
         {

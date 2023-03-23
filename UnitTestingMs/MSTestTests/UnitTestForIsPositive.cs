@@ -11,7 +11,6 @@ namespace MSTestTests
         [TestMethod]
         public void IsPositiveForPositiveValue()
         {
-
             var valueToCalculate = 1;
 
             var result = calculator.isPositive(valueToCalculate);
@@ -21,7 +20,6 @@ namespace MSTestTests
         [TestMethod]
         public void IsPositiveForNegativeValue()
         {
-
             var valueToCalculate = -1;
 
             var result = calculator.isPositive(valueToCalculate);

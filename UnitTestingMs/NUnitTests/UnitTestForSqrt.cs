@@ -1,6 +1,5 @@
 ﻿using System;
 using CSharpCalculator;
-using MSTestTests;
 using NUnit.Framework;
 using Assert = NUnit.Framework.Assert;
 
