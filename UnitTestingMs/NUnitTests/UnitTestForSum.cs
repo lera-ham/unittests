@@ -10,7 +10,6 @@ namespace NUnitTests
     [Parallelizable(ParallelScope.All)]
     public class UnitTestForSum : NUnitBaseClass
     {
-        Calculator calculator = new Calculator();
         [Test]
         public void SumPositive()
         {

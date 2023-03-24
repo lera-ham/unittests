@@ -7,7 +7,6 @@ namespace MSTestTests
     [TestClass]
     public class UnitTestForSum : MSTestBaseClass
     {
-        Calculator calculator = new Calculator();
         [TestMethod]
         public void SumPositive()
         {

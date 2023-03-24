@@ -5,18 +5,51 @@ using Assert = NUnit.Framework.Assert;
 
 namespace NUnitTests
 {
-    [TestFixture]
+    // [TestFixture]
+
     public class NUnitBaseClass
     {
-        [SetUp]
-        public void TestInit()
+        public Calculator calculator;
+        [SetUpFixture]
+        public class MySetUpClass
         {
-            Console.Out.WriteLine("Starting test!");
+            [OneTimeSetUp]
+            public void TestInit()
+            {
+                Calculator calculator = new Calculator();
+                Console.Out.WriteLine("Starting test!");
+            }
         }
-        [TearDown]
+        [OneTimeTearDown]
         public void CleanUp()
         {
             Console.Out.WriteLine("Finished!");
         }
     }
 }
+
+
+
+
+//using System;
+//using CSharpCalculator;
+//using NUnit.Framework;
+//using Assert = NUnit.Framework.Assert;
+
+//namespace NUnitTests
+//{
+//    [TestFixture]
+//    public class NUnitBaseClass
+//    {
+//        [SetUp]
+//        public void TestInit()
+//        {
+//            Console.Out.WriteLine("Starting test!");
+//        }
+//        [TearDown]
+//        public void CleanUp()
+//        {
+//            Console.Out.WriteLine("Finished!");
+//        }
+//    }
+//}

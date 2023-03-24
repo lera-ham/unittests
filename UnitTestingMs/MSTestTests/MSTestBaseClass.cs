@@ -6,13 +6,15 @@ namespace MSTestTests
 {
     [TestClass]
     public class MSTestBaseClass
-    {public TestContext TestContext { get; set; }
-        [TestInitialize]
+    {
+        public Calculator calculator;
+        [ClassInitialize]
         public void TestInit()
         {
-            Console.Out.WriteLine("Starting test!");
+          calculator = new Calculator();
+          Console.Out.WriteLine("Starting test!");
         }
-        [TestCleanup]
+        [ClassCleanup]
         public void CleanUp()
         {
             Console.Out.WriteLine("Finished!");

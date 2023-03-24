@@ -9,7 +9,6 @@ namespace NUnitTests
     [Parallelizable(ParallelScope.All)]
     public class UnitTestForSubtraction : NUnitBaseClass
     {
-        Calculator calculator = new Calculator();
         [TestMethod]
         public void SubPositive()
         {

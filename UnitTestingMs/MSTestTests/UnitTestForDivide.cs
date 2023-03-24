@@ -7,7 +7,6 @@ namespace MSTestTests
     [TestClass]
     public class UnitTestForDivide : MSTestBaseClass
     {
-        Calculator calculator = new Calculator();
         [DataTestMethod]
         [DataRow(1, 1, 1)]
         [DataRow(12, 4, 3)]

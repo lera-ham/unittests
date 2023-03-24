@@ -7,7 +7,6 @@ namespace MSTestTests
     [TestClass]
     public class UnitTestForIsPositive : MSTestBaseClass
     {
-        Calculator calculator = new Calculator();
         [TestMethod]
         public void IsPositiveForPositiveValue()
         {

@@ -9,7 +9,6 @@ namespace NUnitTests
     [Parallelizable(ParallelScope.All)]
     public class UnitTestForIsPositive : NUnitBaseClass
     {
-        Calculator calculator = new Calculator();
         [Test]
         public void IsPositive()
         {

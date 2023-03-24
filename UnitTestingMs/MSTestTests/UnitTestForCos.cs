@@ -7,7 +7,6 @@ namespace MSTestTests
     [TestClass]
     public class UnitTestForCos : MSTestBaseClass
     {
-        Calculator calculator = new Calculator();
         [TestMethod]
         public void CosOfZero()
         {

@@ -9,7 +9,6 @@ namespace NUnitTests
     [Parallelizable(ParallelScope.All)]
     public class UnitTestForSin : NUnitBaseClass
     {
-        Calculator calculator = new Calculator();
         [Test]
         public void SinOfZero()
         {

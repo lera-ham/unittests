@@ -7,7 +7,6 @@ namespace MSTestTests
     [TestClass]
     public class UnitTestForSqrt : MSTestBaseClass
     {
-        Calculator calculator = new Calculator();
         [TestMethod]
         public void SqrtSmallValue()
         {

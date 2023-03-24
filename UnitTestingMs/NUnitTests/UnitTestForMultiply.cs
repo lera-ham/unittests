@@ -9,8 +9,6 @@ namespace NUnitTests
     [Parallelizable(ParallelScope.All)]
     public class UnitTestForMultiply : NUnitBaseClass
     {
-        Calculator calculator = new Calculator();
-
         [Test]
         public void MultiplyPositive()
         {

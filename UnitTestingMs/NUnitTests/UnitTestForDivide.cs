@@ -9,7 +9,6 @@ namespace NUnitTests
     [Parallelizable(ParallelScope.All)]
     public class UnitTestForDivide : NUnitBaseClass
     {
-        Calculator calculator = new Calculator();
         [Test]
         [TestCase(3, 3, 1)]
         [TestCase(4, 2, 2)]

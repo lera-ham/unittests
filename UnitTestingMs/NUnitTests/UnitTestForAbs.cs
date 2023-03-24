@@ -9,7 +9,6 @@ namespace NUnitTests
    // [Parallelizable(ParallelScope.All)]
     public class UnitTestForAbs: NUnitBaseClass
     {
-        Calculator calculator = new Calculator();
         [Test]
         public void AbsAbsForNegative()
         {
