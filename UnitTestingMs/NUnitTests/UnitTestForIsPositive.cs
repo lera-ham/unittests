@@ -19,7 +19,7 @@ namespace NUnitTests
             Assert.AreEqual(true, result);
         }
 
-        [TestMethod]
+        [Test]
         public void IsPositive_NegativeNumber_ReturnsFalse()
         {
             var valueToCalculate = -1;

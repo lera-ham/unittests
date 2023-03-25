@@ -9,7 +9,7 @@ namespace NUnitTests
     [Parallelizable(ParallelScope.All)]
     public class UnitTestForSubtraction : NUnitBaseClass
     {
-        [TestMethod]
+        [Test]
         public void Sub_PositiveNumbers_ReturnsCorrectValue()
         {
             var valueToSubstractFrom = 7;
@@ -20,7 +20,7 @@ namespace NUnitTests
             Assert.AreEqual(2, result);
         }
 
-        [TestMethod]
+        [Test]
         public void Sub_NegativeNumbers_ReturnsCorrectValue()
         {
             var valueToSubstractFrom = -7;
