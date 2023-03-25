@@ -16,6 +16,7 @@ namespace MSTestTests
 
             Assert.AreEqual(3, result);
         }
+
         [TestMethod]
         public void Abs_PositiveNumber_ReturnsAbsoluteValue()
         {

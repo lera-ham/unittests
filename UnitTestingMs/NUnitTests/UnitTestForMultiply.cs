@@ -19,6 +19,7 @@ namespace NUnitTests
 
             Assert.AreEqual(28, result);
         }
+
         [Test]
         public void Multiply_NegativeNumbers_ReturnsCorrectValue()
         {

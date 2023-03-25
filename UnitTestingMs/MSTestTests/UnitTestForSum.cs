@@ -19,6 +19,7 @@ namespace MSTestTests
 
             Assert.AreEqual(7, result);
         }
+
         [TestMethod]
         public void Sum_NegativeNumbers_ReturnsCorrectValue()
         {

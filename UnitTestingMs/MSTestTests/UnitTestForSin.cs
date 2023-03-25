@@ -16,6 +16,7 @@ namespace MSTestTests
 
             Assert.AreEqual(0, result);
         }
+
         [TestMethod]
         public void Sin_PositiveNumber_ReturnsTheSameValueAsMathClass()
         {

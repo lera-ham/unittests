@@ -17,6 +17,7 @@ namespace MSTestTests
 
             Assert.AreEqual(1, result);
         }
+
         [TestMethod]
         public void Pow_NegativeNumberOddDegree_ReturnsCorrectValue()
         {

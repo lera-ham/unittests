@@ -17,6 +17,7 @@ namespace MSTestTests
 
             Assert.AreEqual(3, result);
         }
+
         [TestMethod]
         public void Sqrt_FourDigitNumber_ReturnsCorrectValue()
         {

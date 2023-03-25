@@ -19,6 +19,7 @@ namespace NUnitTests
 
             Assert.AreEqual(1, result);
         }
+
         [Test]
         public void Pow_NegativeNumberOddDegree_ReturnsCorrectValue()
         {

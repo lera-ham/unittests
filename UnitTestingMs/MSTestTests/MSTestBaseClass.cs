@@ -8,12 +8,14 @@ namespace MSTestTests
     public class MSTestBaseClass
     {
         public static Calculator calculator;
+
         [ClassInitialize(InheritanceBehavior.BeforeEachDerivedClass)]
         public static void TestInit(TestContext testContext)
         {
           calculator = new Calculator();
           Console.Out.WriteLine("Starting test!");
         }
+
         [ClassCleanup(InheritanceBehavior.BeforeEachDerivedClass)]
         public void CleanUp()
         {

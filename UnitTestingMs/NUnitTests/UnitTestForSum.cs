@@ -22,6 +22,7 @@ namespace NUnitTests
 
             Assert.AreEqual(7, result);
         }
+
         [Test]
         public void Sum_NegativeNumbers_ReturnsCorrectValue()
         {

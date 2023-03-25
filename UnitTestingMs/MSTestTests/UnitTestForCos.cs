@@ -16,6 +16,7 @@ namespace MSTestTests
 
             Assert.AreEqual(1, result);
         }
+
         [TestMethod]
         public void Cos_PositiveNumber_ReturnsTheSameValueAsMathClass()
         { 

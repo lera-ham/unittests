@@ -18,6 +18,7 @@ namespace NUnitTests
 
             Assert.AreEqual(0, result);
         }
+
         [Test]
         public void Sin_PositiveNumber_ReturnsTheSameValueAsMathClass()
         {

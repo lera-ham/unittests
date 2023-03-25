@@ -18,6 +18,7 @@ namespace NUnitTests
 
                 Assert.AreEqual(3, result);
             }
+
             [Test]
             public void Sqrt_FourDigitNumber_ReturnsCorrectValue()
             {

@@ -17,6 +17,7 @@ namespace MSTestTests
 
             Assert.AreEqual(28, result);
         }
+
         [TestMethod]
         public void Multiply_NegativeNumbers_ReturnsCorrectValue()
         {

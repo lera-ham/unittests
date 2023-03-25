@@ -17,6 +17,7 @@ namespace MSTestTests
 
             Assert.AreEqual(q, result);
         }
+
         [TestMethod]
         public void Divide_NegativeNumbers_ReturnsCorrectValue()
         {

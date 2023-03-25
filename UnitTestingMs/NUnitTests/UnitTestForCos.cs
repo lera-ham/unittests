@@ -18,6 +18,7 @@ namespace NUnitTests
 
             Assert.AreEqual(1, result);
         }
+
         [Test]
         public void Cos_PositiveNumber_ReturnsTheSameValueAsMathClass()
         {

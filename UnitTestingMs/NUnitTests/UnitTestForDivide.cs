@@ -19,6 +19,7 @@ namespace NUnitTests
 
             Assert.AreEqual(q, result);
         }
+
         [Test]
         public void Divide_NegativeNumbers_ReturnsCorrectValue()
         {

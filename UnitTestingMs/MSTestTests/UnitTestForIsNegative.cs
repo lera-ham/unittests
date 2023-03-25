@@ -16,6 +16,7 @@ namespace MSTestTests
 
             Assert.AreEqual(true, result);
         }
+
         [TestMethod]
         public void IsNegative_PositiveNumber_ReturnsFalse()
         {
