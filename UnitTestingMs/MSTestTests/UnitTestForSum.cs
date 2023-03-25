@@ -8,7 +8,7 @@ namespace MSTestTests
     public class UnitTestForSum : MSTestBaseClass
     {
         [TestMethod]
-        public void SumPositive()
+        public void Sum_PositiveNumbers_ReturnsCorrectValue()
         {
             var firstValueToAdd = 1;
             double firstValueToAddDouble = Convert.ToDouble(firstValueToAdd);
@@ -20,7 +20,7 @@ namespace MSTestTests
             Assert.AreEqual(7, result);
         }
         [TestMethod]
-        public void SumNegative()
+        public void Sum_NegativeNumbers_ReturnsCorrectValue()
         {
             var firstValueToAdd = -1;
             double firstValueToAddDouble = Convert.ToDouble(firstValueToAdd);

@@ -11,14 +11,14 @@ namespace MSTestTests
         [DataRow(1, 1, 1)]
         [DataRow(12, 4, 3)]
         [DataRow(14, 1, 14)]
-        public void DividePositive(int n, int d, int q)
+        public void Divide_PositiveNumbers_ReturnsCorrectValue(int n, int d, int q)
         {
             var result = calculator.Divide(n, d);
 
             Assert.AreEqual(q, result);
         }
         [TestMethod]
-        public void DivideNegative()
+        public void Divide_NegativeNumbers_ReturnsCorrectValue()
         {
             var valueToDivide = -3;
             var divisor = -1;

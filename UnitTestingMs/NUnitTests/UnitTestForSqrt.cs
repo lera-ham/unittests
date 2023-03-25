@@ -10,7 +10,7 @@ namespace NUnitTests
     public class UnitTestForSqrt : NUnitBaseClass
     {
             [Test]
-            public void SqrtSmallValue()
+            public void Sqrt_OneDigitNumber_ReturnsCorrectValue()
             {
                 var valueToHaveSqrtFrom = 9;
 
@@ -19,7 +19,7 @@ namespace NUnitTests
                 Assert.AreEqual(3, result);
             }
             [Test]
-            public void SqrtBigValue()
+            public void Sqrt_FourDigitNumber_ReturnsCorrectValue()
             {
                 var valueToHaveSqrtFrom = 10000;
 

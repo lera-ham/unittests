@@ -10,7 +10,7 @@ namespace NUnitTests
     public class UnitTestForMultiply : NUnitBaseClass
     {
         [Test]
-        public void MultiplyPositive()
+        public void Multiply_PositiveNumbers_ReturnsCorrectValue()
         {
             var firstValueToMultiply = 7;
             var secondValueToMultiply = 4;
@@ -20,7 +20,7 @@ namespace NUnitTests
             Assert.AreEqual(28, result);
         }
         [Test]
-        public void MultiplyNegative()
+        public void Multiply_NegativeNumbers_ReturnsCorrectValue()
         {
             var firstValueToMultiply = -7;
             var secondValueToMultiply = -4;

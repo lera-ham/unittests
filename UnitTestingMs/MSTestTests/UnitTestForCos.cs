@@ -8,7 +8,7 @@ namespace MSTestTests
     public class UnitTestForCos : MSTestBaseClass
     {
         [TestMethod]
-        public void CosOfZero()
+        public void Cos_ZeroNumber_ReturnsOne()
         {
             var valueToCalculate = 0;
 
@@ -17,7 +17,7 @@ namespace MSTestTests
             Assert.AreEqual(1, result);
         }
         [TestMethod]
-        public void CosOfPositiveValue()
+        public void Cos_PositiveNumber_ReturnsTheSameValueAsMathClass()
         { 
             var valueToCalculate = Math.PI/4;
 

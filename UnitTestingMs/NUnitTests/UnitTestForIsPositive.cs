@@ -10,7 +10,7 @@ namespace NUnitTests
     public class UnitTestForIsPositive : NUnitBaseClass
     {
         [Test]
-        public void IsPositive()
+        public void IsPositive_PositiveNumber_ReturnsTrue()
         {
             var valueToCalculate = 1;
 
@@ -19,7 +19,7 @@ namespace NUnitTests
             Assert.AreEqual(true, result);
         }
         [TestMethod]
-        public void IsPositiveForNegativeValue()
+        public void IsPositive_NegativeNumber_ReturnsFalse()
         {
             var valueToCalculate = -1;
 

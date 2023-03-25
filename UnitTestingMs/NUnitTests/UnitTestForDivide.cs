@@ -13,14 +13,14 @@ namespace NUnitTests
         [TestCase(3, 3, 1)]
         [TestCase(4, 2, 2)]
         [TestCase("14", 1, 14)]
-        public void Divide(int n, int d, int q)
+        public void Divide_PositiveNumbers_ReturnsCorrectValue(int n, int d, int q)
         {
             var result = calculator.Divide(n, d);
 
             Assert.AreEqual(q, result);
         }
         [Test]
-        public void DivideNegative()
+        public void Divide_NegativeNumbers_ReturnsCorrectValue()
         {
             var valueToDivide = -3;
             var divisor = -1;

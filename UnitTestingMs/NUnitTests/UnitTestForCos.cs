@@ -10,7 +10,7 @@ namespace NUnitTests
     public class UnitTestForCos : NUnitBaseClass
     {
         [Test]
-        public void CosOfZero()
+        public void Cos_ZeroNumber_ReturnsOne()
         {
             var valueToCalculate = 0;
 
@@ -19,7 +19,7 @@ namespace NUnitTests
             Assert.AreEqual(1, result);
         }
         [Test]
-        public void CosOfPositiveValue()
+        public void Cos_PositiveNumber_ReturnsTheSameValueAsMathClass()
         {
             var valueToCalculate = Math.PI / 4;
 

@@ -8,7 +8,7 @@ namespace MSTestTests
     public class UnitTestForAbs: MSTestBaseClass
     {
         [TestMethod]
-        public void AbsForNegative()
+        public void Abs_NegativeNumber_ReturnsAbsoluteValue()
         {
             var valueToCalculate = -3;
 
@@ -17,7 +17,7 @@ namespace MSTestTests
             Assert.AreEqual(3, result);
         }
         [TestMethod]
-        public void AbsForPositive()
+        public void Abs_PositiveNumber_ReturnsAbsoluteValue()
         {
             var valueToCalculate = 3;
 

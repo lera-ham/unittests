@@ -11,7 +11,7 @@ namespace NUnitTests
     public class UnitTestForSum : NUnitBaseClass
     {
         [Test]
-        public void SumPositive()
+        public void Sum_PositiveNumbers_ReturnsCorrectValue()
         {
             var firstValueToAdd = 1;
             double firstValueToAddDouble = Convert.ToDouble(firstValueToAdd);
@@ -23,7 +23,7 @@ namespace NUnitTests
             Assert.AreEqual(7, result);
         }
         [Test]
-        public void SumNegative()
+        public void Sum_NegativeNumbers_ReturnsCorrectValue()
         {
             var firstValueToAdd = -1;
             double firstValueToAddDouble = Convert.ToDouble(firstValueToAdd);

@@ -8,7 +8,7 @@ namespace MSTestTests
     public class UnitTestForPow : MSTestBaseClass
     {
         [TestMethod]
-        public void PowPositive()
+        public void Pow_PositiveNumberEvenDegree_ReturnsCorrectValue()
         {
             int valueToBeRaised = 1;
             double powerValueDouble = Convert.ToDouble(6);
@@ -18,7 +18,7 @@ namespace MSTestTests
             Assert.AreEqual(1, result);
         }
         [TestMethod]
-        public void PowNegative()
+        public void Pow_NegativeNumberOddDegree_ReturnsCorrectValue()
         {
             int valueToBeRaised = -1;
             double powerValueDouble = Convert.ToDouble(5);

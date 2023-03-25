@@ -8,7 +8,7 @@ namespace MSTestTests
     public class UnitTestForSubtraction : MSTestBaseClass
     {
         [TestMethod]
-        public void SubPositive()
+        public void Sub_PositiveNumbers_ReturnsCorrectValue()
         {
             var valueToSubstractFrom = 7;
             var valueToSubstract = 5;
@@ -18,7 +18,7 @@ namespace MSTestTests
             Assert.AreEqual(2, result);
         }
         [TestMethod]
-        public void SubNegative()
+        public void Sub_NegativeNumbers_ReturnsCorrectValue()
         {
             var valueToSubstractFrom = -7;
             var valueToSubstract = -5;

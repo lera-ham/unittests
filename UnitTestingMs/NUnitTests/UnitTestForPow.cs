@@ -10,7 +10,7 @@ namespace NUnitTests
     public class UnitTestForPow : NUnitBaseClass
     {
         [Test]
-        public void PowPositive()
+        public void Pow_PositiveNumberEvenDegree_ReturnsCorrectValue()
         {
             int valueToBeRaised = 1;
             double powerValueDouble = Convert.ToDouble(6);
@@ -20,7 +20,7 @@ namespace NUnitTests
             Assert.AreEqual(1, result);
         }
         [Test]
-        public void PowNegative()
+        public void Pow_NegativeNumberOddDegree_ReturnsCorrectValue()
         {
             int valueToBeRaised = -1;
             double powerValueDouble = Convert.ToDouble(5);

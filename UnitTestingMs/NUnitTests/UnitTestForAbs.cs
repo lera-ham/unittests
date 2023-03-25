@@ -10,7 +10,7 @@ namespace NUnitTests
     public class UnitTestForAbs: NUnitBaseClass
     {
         [Test]
-        public void AbsAbsForNegative()
+        public void Abs_NegativeNumber_ReturnsAbsoluteValue()
         {
             var valueToCalculate = -3;
 
@@ -19,7 +19,7 @@ namespace NUnitTests
             Assert.AreEqual(3, result);
         }
         [Test]
-        public void AbsAbsForPositive()
+        public void Abs_PositiveNumber_ReturnsAbsoluteValue()
         {
             var valueToCalculate = 3;
 

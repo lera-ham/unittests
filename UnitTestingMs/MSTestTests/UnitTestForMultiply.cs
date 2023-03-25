@@ -8,7 +8,7 @@ namespace MSTestTests
     public class UnitTestForMultiply : MSTestBaseClass
     {
         [TestMethod]
-        public void MultiplyPositive()
+        public void Multiply_PositiveNumbers_ReturnsCorrectValue()
         {
             var firstValueToMultiply = 7;
             var secondValueToMultiply = 4;
@@ -18,7 +18,7 @@ namespace MSTestTests
             Assert.AreEqual(28, result);
         }
         [TestMethod]
-        public void MultiplyNegative()
+        public void Multiply_NegativeNumbers_ReturnsCorrectValue()
         {
             var firstValueToMultiply = -7;
             var secondValueToMultiply = -4;

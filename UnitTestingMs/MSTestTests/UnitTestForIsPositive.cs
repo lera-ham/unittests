@@ -8,7 +8,7 @@ namespace MSTestTests
     public class UnitTestForIsPositive : MSTestBaseClass
     {
         [TestMethod]
-        public void IsPositiveForPositiveValue()
+        public void IsPositive_PositiveNumber_ReturnsTrue()
         {
             var valueToCalculate = 1;
 
@@ -17,7 +17,7 @@ namespace MSTestTests
             Assert.AreEqual(true, result);
         }
         [TestMethod]
-        public void IsPositiveForNegativeValue()
+        public void IsPositive_NegativeNumber_ReturnsFalse()
         {
             var valueToCalculate = -1;
 

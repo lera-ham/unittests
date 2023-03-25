@@ -8,7 +8,7 @@ namespace MSTestTests
     public class UnitTestForSin : MSTestBaseClass
     {
         [TestMethod]
-        public void SinOfZero()
+        public void Sin_ZeroNumber_ReturnsZero()
         {
             var valueToCalculate = 0;
 
@@ -17,7 +17,7 @@ namespace MSTestTests
             Assert.AreEqual(0, result);
         }
         [TestMethod]
-        public void SinOfPositiveValue()
+        public void Sin_PositiveNumber_ReturnsTheSameValueAsMathClass()
         {
             var valueToCalculate = Math.PI / 4;
 
